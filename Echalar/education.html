@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Education & Achievements | Ziny Jen Marcelo</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #fce4ec);
+      color: #333;
+    }
+
+    /* Horizontal Navigation */
+    .horizontal-nav {
+      width: 100%;
+      background: linear-gradient(to right, #0077cc, #005fa3);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .horizontal-nav h1 {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    .horizontal-nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      margin: 0;
+    }
+
+    .horizontal-nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .horizontal-nav ul li a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0%;
+      height: 2px;
+      background-color: #ffdd57;
+      transition: width 0.3s ease;
+    }
+
+    .horizontal-nav ul li a:hover {
+      color: #ffdd57;
+    }
+
+    .horizontal-nav ul li a:hover::after {
+      width: 100%;
+    }
+
+    /* Main Content */
+    main {
+      padding: 8rem 2rem 4rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #0077cc;
+      text-align: center;
+    }
+
+    .timeline {
+      position: relative;
+      margin: 2rem auto;
+      padding-left: 2rem;
+      border-left: 3px solid #0077cc;
+    }
+
+    .timeline-entry {
+      margin-bottom: 3rem;
+      position: relative;
+    }
+
+    .timeline-entry::before {
+      content: '';
+      position: absolute;
+      left: -11px;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      background-color: #0077cc;
+      border-radius: 50%;
+      border: 3px solid #fff;
+    }
+
+    .timeline-entry h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #0077cc;
+    }
+
+    .timeline-entry p {
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      main {
+        padding: 10rem 1rem 2rem;
+      }
+
+      .horizontal-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+      }
+
+      .horizontal-nav ul {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+
+      .timeline {
+        padding-left: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="horizontal-nav">
+    <h1>Ziny Jen</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="skills.html">Skills</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2>Education & Achievements</h2>
+    <div class="timeline">
+      <div class="timeline-entry">
+        <h3>Elementary School</h3>
+        <p>Graduated from [Your Elementary School Name] with honors. Developed early interest in computers and technology.</p>
+      </div>
+      <div class="timeline-entry">
+        <h3>High School</h3>
+        <p>Completed secondary education at [Your High School Name]. Participated in coding competitions and tech clubs.</p>
+      </div>
+      <div class="timeline-entry">
+        <h3>College</h3>
+        <p>Currently pursuing BSIT at [Your College Name], 3rd Year. Dean’s Lister, active in software development projects and student organizations.</p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

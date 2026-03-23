@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Home | Ziny Jen Marcelo</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #fce4ec);
+      color: #333;
+    }
+
+    /* Horizontal Navigation */
+    .horizontal-nav {
+      width: 100%;
+      background: linear-gradient(to right, #0077cc, #005fa3);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .horizontal-nav h1 {
+      font-size: 1.8rem;
+      margin: 0;
+    }
+
+    .horizontal-nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      margin: 0;
+    }
+
+    .horizontal-nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .horizontal-nav ul li a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0%;
+      height: 2px;
+      background-color: #ffdd57;
+      transition: width 0.3s ease;
+    }
+
+    .horizontal-nav ul li a:hover {
+      color: #ffdd57;
+    }
+
+    .horizontal-nav ul li a:hover::after {
+      width: 100%;
+    }
+
+    /* Main Content */
+    main {
+      padding: 8rem 5rem 4rem; /* Top padding to avoid overlap with nav */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .home-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6rem;
+      max-width: 1000px;
+      width: 100%;
+    }
+
+    .home-text {
+      flex: 1;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .home-text h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #0077cc;
+    }
+
+    .home-text p {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      color: #444;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background-color: #0077cc;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+      animation: pulse 2s infinite;
+    }
+
+    .btn:hover {
+      background-color: #005fa3;
+    }
+
+    .home-image {
+      flex-shrink: 0;
+      animation: floatIn 1.2s ease-in-out;
+    }
+
+    .home-image img {
+      width: 280px;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #0077cc;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes floatIn {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(0, 119, 204, 0.7); }
+      70% { box-shadow: 0 0 0 10px rgba(0, 119, 204, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(0, 119, 204, 0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      main {
+        padding: 10rem 1rem 2rem;
+      }
+
+      .home-box {
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+      }
+
+      .horizontal-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+      }
+
+      .horizontal-nav ul {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+
+      .home-image img {
+        width: 220px;
+        height: 220px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="horizontal-nav">
+    <h1>Ziny Jen</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="skills.html">Skills</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="home-content">
+      <div class="home-box">
+        <div class="home-text">
+          <h1>Ziny Jen Marcelo</h1>
+          <p>👤 20 years old</p>
+          <p>💻 BSIT - 3rd Year College</p>
+          <a href="about.html" class="btn">Explore My World</a>
+        </div>
+        <div class="home-image">
+          <img src="your-photo.jpg" alt="Ziny Jen Marcelo" />
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
+
